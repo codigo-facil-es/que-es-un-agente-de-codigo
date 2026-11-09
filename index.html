@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Nombre</title>
+  <style>
+    :root {
+      --fondo: #f4f1ec;
+      --tarjeta: #ffffff;
+      --texto: #1f2328;
+      --texto-suave: #5b6168;
+      --acento: #2f6f5e;
+      --acento-texto: #ffffff;
+      --borde: #e3ded6;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fondo: #16181b;
+        --tarjeta: #202327;
+        --texto: #eceae6;
+        --texto-suave: #a7adb3;
+        --acento: #6cc4a8;
+        --acento-texto: #102019;
+        --borde: #30343a;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+    }
+
+    .tarjeta {
+      width: 100%;
+      max-width: 420px;
+      padding: 40px 28px;
+      background: var(--tarjeta);
+      border: 1px solid var(--borde);
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 6vw, 2.4rem);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .frase {
+      color: var(--texto-suave);
+      font-size: 1.05rem;
+      margin-bottom: 32px;
+    }
+
+    .redes {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .redes a {
+      display: block;
+      padding: 14px 20px;
+      border-radius: 12px;
+      background: var(--acento);
+      color: var(--acento-texto);
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .redes a:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    .redes a:focus-visible {
+      outline: 3px solid var(--texto);
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <main class="tarjeta">
+    <h1>Tu Nombre</h1>
+    <p class="frase">Aquí va una frase sobre ti: qué haces, qué te gusta o qué estás aprendiendo.</p>
+
+    <ul class="redes">
+      <li><a href="https://instagram.com/tu_usuario" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://linkedin.com/in/tu_usuario" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/tu_usuario" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </main>
+</body>
+</html>
